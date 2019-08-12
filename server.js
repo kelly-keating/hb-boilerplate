@@ -31,23 +31,7 @@ var data = {
 // routes
 
 server.get('/', function (req, res) {
-  res.redirect('/cats') // what is this doing?
-})
-
-server.get('/cats', function (req, res) {
-  res.render('index', data)
-})
-
-server.get('/cats/new', function (req, res) {
-  res.render('new')
-})
-
-server.get('/cats/:id', function (req, res) {
-  console.log(req.params) // try going to /cats/1
-})
-
-server.post('/cats', function (req, res) {
-  console.log(req.body)
+  res.render('index')
 })
 
 module.exports = server
